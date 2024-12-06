@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+ </head>
+ <body>
+    
+
+ <!-- Contenue de notre page -->
+ <div class="row" id="pig-card">
+    <!-- Petit menu pour voir les vaccination et le plans-->
+    <div class="col-1">
+        <div id="petitmenu">
+            <button type="button" class="p-3 w-100" class="button" style="border-bottom: solid 2px black;">
+                <img src="icons/control-diet-dieting-svgrepo-com.svg" width="45px" height="45px" alt="" srcset=""
+                    id="effetimg">
+            </button>
+            <button type="button" class="p-3 w-100" class="button">
+                <img src="icons/syringe-medical-svgrepo-com.svg" width="45px" height="45px" alt="" srcset=""
+                    id="effetimg">
+            </button>
+        </div>
+    </div>
+    <!--Les contenue avec les graphs -->
+    <div class="col-auto" id="col-auto">
+        <div class="pig">
+            <img src="image/cochon1.jfif" alt="Cochon 1">
+            <div class="text-overlay">C-FT023</div>
+        </div>
+        <a href="#">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="container mb-1 p-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Canvas avec largeur et hauteur personnalisées -->
+                                <canvas id="customCharpie" width="220" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-auto" id="col-auto">
+        
+            <div class="col-auto">
+                <div class="container mb-1 p-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="fontStyle" >
+                                <p class="age"><b>Age : </b>20 mois</p>
+                                <p class="poids"><b>Poids : </b>100 kg</p>
+                                <p class="genre"><b>Genre : </b>Male</p>
+                                <p class="specificite"><b>Specificite : </b> Pure</p>
+                                <p class="type"><b>Type : </b>Truie</p>
+                                <p class="race"><b>Race : </b>Large White</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+        <div class="col-auto">
+            <a href="#">
+                <div class="container mb-1 p-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Canvas avec largeur et hauteur personnalisées -->
+                            <canvas id="customChar" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="row">
+            <div class="col-1 p-0 m-0" style="width: 60px;">
+                <button type="button" class="button" class="mb-3">
+                    <img src="icons/calendar-add-event-svgrepo-com.svg" id="effetimg" width="100%" height="45px"
+                        alt="" srcset="">
+                </button>
+                <button type="button" class="button" class="mb-3">
+                    <img src="icons/food-scale-tool-svgrepo-com.svg" id="effetimg" width="100%" height="45px" alt=""
+                        srcset="">
+                </button>
+            </div>
+            <div class="col-auto">
+                <div class="container mb-1 p-0">
+                    <div class="card">
+                        <div class="card-body p-0 m-0">
+                            <!-- Canvas avec largeur et hauteur personnalisées -->
+                            <canvas id="customCharx" width="490" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Les Interpretations des nos graph-->
+                <div class="m-0" style="width: 510px;">
+                    <ul>
+                        <li>
+                            La mise en place d'une systeme de vente fiable est une masse a faire dans la vie des
+                            producteurs
+                        </li>
+                        <li>
+                            La production d'un produit est la plus important dans le vente des cochons
+                        </li>
+                        <li>
+                            Il faut avoir la courage de surpasser et de confronter
+                            les difficultees vue que nous munie d'une capacite tres developper mais ca va dependre
+                            de la facons ou nousles utilisant
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="row flex-wrap mx-auto mt-1 p-2 align-content-center align-items-center justify-content-center w-100"
+                    id="liste" style="border-top: solid; height: 66px;">
+                    <div class="col-auto">
+                        <h2 class="m-auto" id="titre" style="width: 495px;">
+                            Etat et Control de chaque individu!
+                        </h2>
+                    </div>
+                    <div class="col-1 p-0 m-0">
+                        <a class="nav-link" href="#etat" >
+                          
+                            <button class="button mx-auto w-100" id="con">
+                                <img src="icons/control-diet-dieting-svgrepo-com.svg" width="35px" height="35px" alt=""
+                                    srcset="" id="effetimg">
+                                    
+                            </button>
+                        
+                        </a>
+                    </div>
+                    <div class="col-1 p-0 m-0">
+                        <a href="#vaccin" class="nav-link">
+                           
+                            <button type="button" class="button mx-auto w-100" id="vac">
+                                <img src="icons/syringe-medical-svgrepo-com.svg" width="35px" height="35px" alt=""
+                                    srcset="" id="effetimg">
+                                    
+                            </button>
+                           
+                        </a>
+                    </div>
+                    <div class="col-1 p-0 my-0" style="width: auto;">
+
+                    </div>
+
+                </div>
+
+
+
+<div class="dropdown">
+                <li class="nav-item mx-auto my-1 p-2 align-items-center" 
+                style="background-color: rgb(248, 250, 215); width: 100%; justify-content: center;">
+               
+                    <!-- Bouton avec notification -->
+                    <div style="position: relative; display: inline-block;">
+                        <button class="btn btn-warning" type="button" data-bs-toggle="dropdown">
+                            <!-- Icône -->
+                            <img src="icons/bell.svg" width="30" height="30" alt="bell-icon">
+                            <!-- Badge -->
+                            <span class="badge bg-danger"
+                                  style="
+                                      position: absolute;
+                                      top: -5px;
+                                      right: -5px;
+                                      font-size: 12px;
+                                      padding: 5px 7px;
+                                      border-radius: 50%;
+                                      line-height: 1;
+                                  ">4</span>
+                        </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item" href="#">Link 2</a></li>
+                  <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+                    </div>
+                    <!-- Texte Notification -->
+                    <div class="navbar-toggler" data-bs-toggle="collapse">Notification</div>
+                
+            </li>
+        </div>
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Link 1</a></li>
+              <li><a class="dropdown-item" href="#">Link 2</a></li>
+              <li><a class="dropdown-item" href="#">Link 3</a></li>
+            </ul>
+          </div>
+
+            <script src="js/bootstrap.bundle.min.js"></script>
+
+        </body>
+        </html>

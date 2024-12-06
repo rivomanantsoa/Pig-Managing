@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!--- NavBar non responsive -->
+    <div class="row pb-1" id="menu">
+        <div class="col-1 mt-3">
+            <a class="navbar-brand" href="#">
+                <img src="image/farmsgd.png" id="image" alt="" srcset="" width="90px" height="90px">
+            </a>
+        </div>
+        <div class="col-11">
+            <div class="row p-0  m-3 align-content-center align-items-center" id="recherche">
+                <div class="col-1">
+                    <h5>Recherche</h5>
+                </div>
+                <div class="col-2 p-2 pe-0"> <input type="text" class="form-control " name="" id="searchInput">
+
+                </div>
+                <div class="col-1 p-0 m-0"><button type="button" class="button">
+                        <img src="icons/icons8-search.svg" width="25px" height="25px" alt="" srcset="">
+                    </button></div>
+                <div class="col-1 p-0 me-2">
+                    <button type="button" class="button">
+                        <img src="icons/home-with-a-tree-at-side-svgrepo-com.svg" width="45px" height="45px" alt=""
+                            srcset="">
+                    </button>
+                </div>
+                <div class="col-1 p-0 me-2">
+                    <button type="button" class="button">
+                        <img src="icons/bell.svg" width="40px" height="35px" alt="" srcset="">
+                    </button>
+                </div>
+
+                <div class="col-1 p-0 me-2">
+                    <button type="button" class="button">
+                        <img src="icons/bar-chart-graph-svgrepo-com.svg" width="45px" height="45px" alt="" srcset="">
+                    </button>
+                </div>
+                <div class="col-1 p-0 me-2">
+                    <button type="button" class="button">
+                        <img src="icons/money-pig-svgrepo-com.svg" width="45px" height="45px" alt="" srcset="">
+                    </button>
+                </div>
+                <div class="col-1 p-0 me-2">
+                    <button type="button" class="button">
+                        <img src="icons/bar-chart-marketing-svgrepo-com.svg" width="45px" height="45px" alt=""
+                            srcset="">
+                    </button>
+                </div>
+                <div class="col-2">
+                    <div class="form-check form-switch">
+                        <input type="checkbox" name="" id="checking" class="form-check-input"> Fitre
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-wrap justify-content-center" id="amoxie" style="display: none;">
+                <div class="col-auto mb-0 me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/cochonLandrace.jpg" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedAge">
+                                <option selected disabled>Age</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto mb-0 me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/cochonnoire.jfif" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedRace">
+                                <option selected disabled>Race</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto mb-0 me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/1cochon.jpg" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedPoids">
+                                <option selected disabled>Poids</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto mb-0 me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/cochonPorland.jpg" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedType">
+                                <option selected disabled>Type</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto mb-0 me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/bebeCohon.jfif" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedSpecificite">
+                                <option selected disabled>Specificite</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto mb-0  me-2" id="petitcase">
+                    <div class="row">
+                        <div class="col-3 p-0">
+                            <img src="image/cochon1.jfif" alt="" id="imgpetit">
+                        </div>
+                        <div class="col p-0" id="text">
+                            <select class="form-control m-0" id="SelectedGenre">
+                                <option selected disabled>Genre</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="button" onclick="resetFilters()">
+                        <img src="icons/refresh-circle-svgrepo-com.svg" width="45px" height="45px" alt="" srcset="">
+                    </button>
+                </div>
+                
+                <div id="result-summary" style="font-size: 1.2em; margin: 10px 0; color: darkblue; position: absolute; display: none; ">
+                    <!-- Les résultats seront affichés ici -->
+                </div> 
+            </div>
+            <div class="col-auto">
+                <div id="pigStats" class="stats-container"></div>
+            </div>
+        </div>
+    </div>
+    <div id="no-results" style="display: none;">Aucun résultat trouvé.</div>
+
+
+    <!--- Contenue de notre menu -->
+    <div class="row mx-0 p-2 w-100">
+        <div class="col mt-4" id="contenu">
+            <div class="row" id="pig-container">
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0" id="pig-card" onclick="show(this)">
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 20 mois</p>
+                            <p class="poids">Poids: 100 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Pure</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/cochon1.jfif" alt="Cochon 1" id="image1">
+                        <div class="text-overlay">C-FT023</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0" id="pig-card" onclick="show(this)">
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 2 mois</p>
+                            <p class="poids">Poids: 10 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/bebeCohon.jfif" alt="Cochon 2">
+                        <div class="text-overlay">C-FE52</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0" id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 3 mois</p>
+                            <p class="poids">Poids: 25 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/cochon2.jpg" alt="Cochon 3">
+                        <div class="text-overlay">C-ME032</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0" id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 8 mois</p>
+                            <p class="poids">Poids: 100 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Pure</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Landrace</p>
+                        </div>
+                        <img src="image/cochonLandrace.jpg" alt="Cochon 1">
+                        <div class="text-overlay">C-FE025</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0" id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 5 mois</p>
+                            <p class="poids">Poids: 80 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Porland</p>
+                        </div>
+                        <img src="image/cochonnoire.jfif" alt="Cochon 2">
+                        <div class="text-overlay">C-ME065</div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 1 ans</p>
+                            <p class="poids">Poids: 150 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Porland</p>
+                        </div>
+                        <img src="image/cochonPorland.jpg" alt="Cochon 1">
+                        <div class="text-overlay">C-FT046</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 5 mois</p>
+                            <p class="poids">Poids: 70 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/LargeWhite.jfif" alt="Cochon 2">
+                        <div class="text-overlay">C-MT057</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 7 mois</p>
+                            <p class="poids">Poids: 100 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Pure</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Durock</p>
+                        </div>
+                        <img src="image/tamworth.jpg" alt="Cochon 3">
+                        <div class="text-overlay">C-ME028</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 4 mois</p>
+                            <p class="poids">Poids: 60 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Medium White</p>
+                        </div>
+                        <img src="image/mediumWhite.jpg" alt="Cochon 1">
+                        <div class="text-overlay">C-ME069</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 2 mois</p>
+                            <p class="poids">Poids: 20 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Truie</p>
+                            <p class="race">Race: Landrace</p>
+                        </div>
+                        <img src="image/1cochon.jpg" alt="Cochon 2">
+                        <div class="text-overlay">C-FE046</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 2 mois</p>
+                            <p class="poids">Poids: 10 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/2cochon.avif" alt="Cochon 1">
+                        <div class="text-overlay">C-ME089</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 6 mois</p>
+                            <p class="poids">Poids: 100 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Medium White</p>
+                        </div>
+                        <img src="image/3cochon.png" alt="Cochon 2">
+                        <div class="text-overlay">C-FT079</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 7 mois</p>
+                            <p class="poids">Poids: 80 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Medium White</p>
+                        </div>
+                        <img src="image/4cochon.jpg" alt="Cochon 3">
+                        <div class="text-overlay">C-MT065</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)" >
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 8 mois</p>
+                            <p class="poids">Poids: 100 kg</p>
+                            <p class="genre">Genre: Male</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Large White</p>
+                        </div>
+                        <img src="image/5coohon.webp" alt="Cochon 1">
+                        <div class="text-overlay">C-ME032</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-xl-3 m-0 p-0"  id="pig-card" onclick="show(this)">
+                    <div class="pig-card mx-auto">
+                        <div id="couche">
+                            <p class="age">Age: 4 mois</p>
+                            <p class="poids">Poids: 50 kg</p>
+                            <p class="genre">Genre: Femelle</p>
+                            <p class="specificite">specificite: Croisser</p>
+                            <p class="type">Type: Engraisse</p>
+                            <p class="race">Race: Durock</p>
+                        </div>
+                        <img src="image/6cochon.jfif" alt="Cochon 2">
+                        <div class="text-overlay">C-MT059</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 m-0 pe-0" id="show" style="display: none;overflow-y: scroll;
+         height: 460px; box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.1);  background-color: rgb(248, 246, 245);">
+            <div class="w-100" style="position: relative;  ">
+                <button onclick="closeDiv()" class="button" id="total" style="right: 0; position: absolute;">
+                    <img src="icons/close.svg" width="45" height="45" srcset="" id="effetimg" style="color: red;">
+                </button>
+            </div>
+            <p><img id="afficheImg" src="" alt="" srcset="" style="width: 100%;  height: 250px; "></p>
+            <p id="agee"></p>
+            <p id="poidse"></p>
+            <p id="genree"></p>
+            <p id="racee"></p>
+            <p id="typee"></p>
+            <p id="specificitee"></p>
+            <a href="Graph.html">Voire</a>
+        </div>
+    </div>
+    <!--- Footer de notre page -->
+    
+   <script src="js/home.js"></script>
+   <script src="js/filtre.js"></script>
+
+
+</body>
+
+</html>

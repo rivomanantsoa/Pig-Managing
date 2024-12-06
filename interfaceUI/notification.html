@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <link rel="stylesheet" href="Pop-up.CSS">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+       
+        <button class="btn btn-primary" id="openPopup">Ouvrir le pop-up</button>
+    </div>
+
+    <!-- Pop-up -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h2>Bienvenue</h2>
+            <p>Ceci est une fenêtre pop-up.</p>
+            <button class="btn btn-danger" id="closePopup">Fermer</button>
+        </div>
+    </div>
+    
+
+    <!-- Lien vers Bootstrap JS et Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+<script>
+     // Récupérer les éléments HTML
+    const openPopup = document.getElementById('openPopup');
+    const closePopup = document.getElementById('closePopup');
+    const popupOverlay = document.getElementById('popupOverlay');
+    
+    
+    // Fonction pour afficher les lettres successivement
+   
+    
+    // Ouvrir le pop-up et démarrer l'affichage
+    openPopup.addEventListener('click', () => {
+        popupOverlay.style.display = 'flex';
+        displayLetters(); // Démarrer l'affichage des lettres
+    });
+    
+    // Fermer le pop-up
+    closePopup.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+        lettersDisplay.innerHTML = ''; // Réinitialiser l'affichage des lettres
+    });
+</script>  
+
+</body>
+</html>

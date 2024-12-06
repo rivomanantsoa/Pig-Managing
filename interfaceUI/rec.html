@@ -1,0 +1,42 @@
+<div style="position: fixed;background-color: rgba(100, 102, 102, 0.432); height: 100%; display: none;" class="p-0 m-0" id="notification">
+    <div class="col-xl-4 mx-auto p-3 m-3" id="show" style="display: none;
+        height: 400px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        background-color: rgb(201, 195, 195); border-radius: 20px;">
+        <div class="w-100">
+            <button onclick="closeDiv()" class="button" id="total" style="right: 0; position: absolute; top: 0; right: 0px;">
+                <img src="icons/close.svg" width="45" height="45" id="effetimg" style="color: red;">
+            </button>
+        </div>
+        <p class="py-0 my-0" style="position: relative;">
+            <img id="afficheImg" src="" alt="" style="width: 100%; height: 250px; object-fit: cover;">
+            <div class="text-oval">
+                <p id="agee" style="margin: 0;">Age : ...</p>
+                <p id="poidse">Poids : ...</p>
+                <p id="genree">Genre : ...</p>
+                <p id="racee">Race : ...</p>
+                <p id="typee">Type : ...</p>
+                <p id="specificitee">Spécificité : ...</p>
+                <a href="Graph.html">Voir</a>
+            </div>
+        </p>
+    </div>
+</div>
+
+<style>
+.text-oval {
+    position: absolute;
+    display: flex;
+    /* Superposition légère sur l'image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.6); /* Fond blanc semi-transparent */
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000; /* Couleur du texte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Effet d'ombre pour mieux contraster */
+    width: 90%; /* S'ajuste à la largeur du conteneur parent */
+}
+</style>

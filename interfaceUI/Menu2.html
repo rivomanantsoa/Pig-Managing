@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique de Présentation</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/chart.js"></script>
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <style>
+        /* Exemple de style personnalisé */
+        .tippy-box[data-theme~='custom'] {
+            background-color: #0c0c0c;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .spinner-border {
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+        }
+    </style>
+
+    <body style="overflow-y:auto; position: relative; " data-bs-spy="scroll" data-bs-target=".navbar"
+        data-bs-offset="50">
+        <!--- NavBar non responsive -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" id="nav-bar">
+
+        </nav>
+        <!-- Contenue menu voatsindry -->
+        <div class="row flex-wrap mx-auto  p-2 align-content-center align-items-center justify-content-center w-100"
+            id="liste" 
+            >
+            <div class="col-auto">
+                <h2 class="m-auto" id="titre" style="width: 495px;">
+                    Etat et Control de chaque individu!
+                </h2>
+            </div>
+            
+            
+
+        </div>
+        
+        <!-- Contenue de notre page -->
+        <section id="etat">
+            <div class="row" id="pig-card">
+                <!-- Petit menu pour voir les vaccination et le plans-->
+                <div class="col-1">
+                    <div id="petitmenu">
+                        <a class="nav-link" href="#etat" style="height: 50%;">
+
+                            <button class="button mx-auto w-100" id="con">
+                                <img src="icons/control-diet-dieting-svgrepo-com.svg" width="35px" height="35px" alt=""
+                                    srcset="" id="effetimg">
+        
+                            </button>
+        
+                        </a>
+                        <a href="#vaccin" class="nav-link" style="height: 50%;">
+
+                            <button type="button" class="button mx-auto w-100" id="vac">
+                                <img src="icons/syringe-medical-svgrepo-com.svg" width="35px" height="35px" alt="" srcset=""
+                                    id="effetimg">
+        
+                            </button>
+        
+                        </a>
+                       
+                    </div>
+                </div>
+                <!--Les contenue avec les graphs -->
+                <div class="col-auto" id="col-auto">
+                    <div class="pig">
+                        <img src="image/cochon1.jfif" alt="Cochon 1">
+                        <div class="text-overlay">C-FT023</div>
+                    </div>
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="container mb-1 p-0">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!-- Canvas avec largeur et hauteur personnalisées -->
+                                            <canvas id="customCharpie" width="220" height="200"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-auto" id="col-auto">
+
+                    <div class="col-auto">
+                        <div class="container mb-1 p-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="fontStyle">
+                                        <p class="age"><b>Age : </b>20 mois</p>
+                                        <p class="poids"><b>Poids : </b>100 kg</p>
+                                        <p class="genre"><b>Genre : </b>Male</p>
+                                        <p class="specificite"><b>Specificite : </b> Pure</p>
+                                        <p class="type"><b>Type : </b>Truie</p>
+                                        <p class="race"><b>Race : </b>Large White</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto">
+                        <a href="#">
+                            <div class="container mb-1 p-0">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- Canvas avec largeur et hauteur personnalisées -->
+                                        <canvas id="customChar" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="row">
+                        <div class="col-1 p-0 m-0" style="width: 60px;">
+                            <button type="button" class="button" class="mb-3">
+                                <img src="icons/calendar-add-event-svgrepo-com.svg" id="effetimg" width="100%"
+                                    height="35px" alt="" srcset="">
+                            </button>
+                            <button type="button" class="button" class="mb-3">
+                                <img src="icons/food-scale-tool-svgrepo-com.svg" id="effetimg" width="100%"
+                                    height="35px" alt="" srcset="">
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <div class="container mb-1 p-0">
+                                <div class="card">
+                                    <div class="card-body p-0 m-0">
+                                        <!-- Canvas avec largeur et hauteur personnalisées -->
+                                        <canvas id="customCharx" width="490" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Les Interpretations des nos graph-->
+                            <div class="m-0" style="width: 510px;">
+                                <ul>
+                                    <li>
+                                        La mise en place d'une systeme de vente fiable est une masse a faire dans la vie
+                                        des
+                                        producteurs
+                                    </li>
+                                    <li>
+                                        La production d'un produit est la plus important dans le vente des cochons
+                                    </li>
+                                    <li>
+                                        Il faut avoir la courage de surpasser et de confronter
+                                        les difficultees vue que nous munie d'une capacite tres developper mais ca va
+                                        dependre
+                                        de la facons ou nousles utilisant
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="vaccin">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quam magni? Eos quaerat soluta
+                perspiciatis qui
+                molestiae incidunt odio cumque aperiam voluptatibus necessitatibus alias enim, quas pariatur nihil
+                accusantium ab!
+            </div>
+
+        </section>
+    </div>
+
+        <script>
+            // Configuration du graphique
+            const ct = document.getElementById('customChar').getContext('2d');
+            const customChar = new Chart(ct, {
+                type: 'line',
+                data: {
+                    labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'juin'],
+                    datasets: [{
+                        label: 'Consommation par Kgxxxx',
+                        data: [12, 19, 3, 5, 2, 2],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Red line',
+                        data: [1, 12, 3, 10, 7],
+                        borderColor: 'red',
+                        backgroundColor: 'red',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Poids',
+                        data: [0, 24, 6, 5, 9],
+                        borderColor: 'rgba(0, 0, 0, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }
+                    ]
+                },
+                options: {
+                    responsive: false, // Désactive la responsivité pour utiliser les dimensions fixes
+                    maintainAspectRatio: false, // Permet de définir une hauteur différente de la largeur
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <script>
+            // Configuration du graphique
+            const ctf = document.getElementById('customCharpie').getContext('2d');
+            const customCharpie = new Chart(ctf, {
+                type: 'pie',
+                data: {
+                    labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'juin'],
+                    datasets: [{
+                        label: 'Consommation par Kg',
+                        data: [12, 19, 3, 5, 2, 2],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Red line',
+                        data: [1, 12, 3, 10, 7],
+                        borderColor: 'red',
+                        backgroundColor: 'red',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Poids',
+                        data: [0, 24, 6, 5, 9],
+                        borderColor: 'rgba(0, 0, 0, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }
+                    ]
+                },
+                options: {
+                    responsive: false, // Désactive la responsivité pour utiliser les dimensions fixes
+                    maintainAspectRatio: false, // Permet de définir une hauteur différente de la largeur
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <script>
+            // Configuration du graphique
+            const ctx = document.getElementById('customCharx').getContext('2d');
+            const customCharx = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'juin'],
+                    datasets: [{
+                        label: 'Consommation par Kg',
+                        data: [12, 19, 3, 5, 2, 2],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Red line',
+                        data: [1, 12, 3, 10, 7],
+                        borderColor: 'red',
+                        backgroundColor: 'red',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Poids',
+                        data: [0, 24, 6, 5, 9],
+                        borderColor: 'rgba(0, 0, 0, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }
+                    ]
+                },
+                options: {
+                    responsive: false, // Désactive la responsivité pour utiliser les dimensions fixes
+                    maintainAspectRatio: false, // Permet de définir une hauteur différente de la largeur
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        <script src="js/navbar.js"></script>
+        <script src="js/bundle.min.js"></script>
+        <script src="js/Menu2.js"></script>
+
+
+    </body>
+
+</html>

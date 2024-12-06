@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi du cochon - Page d'information</title>
+    <!-- Inclure Bootstrap pour le style et les tableaux réactifs -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Suivi du cochon - #12345</h1>
+        <div class="row">
+            <!-- Informations générales -->
+            <div class="col-md-4">
+                <h2>Informations Générales</h2>
+                <p><strong>Nom / ID :</strong> Cochon #12345</p>
+                <p><strong>Date de naissance :</strong> 01/01/2024</p>
+                <p><strong>Poids initial :</strong> 10 kg</p>
+                <p><strong>Poids actuel :</strong> 50 kg</p>
+                <p><strong>Race :</strong> Landrace</p>
+            </div>
+
+            <!-- Suivi du poids -->
+            <div class="col-md-8">
+                <h2>Suivi du Poids</h2>
+                <!-- Utiliser Chart.js ou un autre outil pour créer un graphique -->
+                <canvas id="poidsChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Alimentation -->
+        <div class="mt-4">
+            <h2>Suivi de l'Alimentation</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Aliment</th>
+                        <th>Quantité (kg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2024</td>
+                        <td>Son de riz</td>
+                        <td>3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>02/01/2024</td>
+                        <td>Maïs</td>
+                        <td>4 kg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- État de santé -->
+        <div class="mt-4">
+            <h2>État de santé</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Vaccin/traitement</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/01/2024</td>
+                        <td>Vaccin contre la dysenterie</td>
+                        <td>Première injection</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Inclure Chart.js pour les graphiques -->
+    <script src="js/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('poidsChart').getContext('2d');
+        var poidsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['01/01/2024', '01/02/2024', '01/03/2024'],
+                datasets: [{
+                    label: 'Poids (kg)',
+                    data: [10, 30, 50],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

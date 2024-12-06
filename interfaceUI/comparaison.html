@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaison de Croissance des Cochons</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/chart.js"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Comparaison de Croissance par Nourriture Consommée</h2>
+        <div class="card">
+            <div class="card-body">
+                <canvas id="comparisonChart" style=" width: 500; height: 250; "></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration du graphique en lignes
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+        const comparisonChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Semaine 1', 'Semaine 2', 'Semaine 3', 'Semaine 4', 'Semaine 5'],
+                datasets: [
+                    {
+                        label: 'Croissance des Cochons (kg)',
+                        data: [10, 20, 35, 50, 70],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Nourriture Consommée (kg)',
+                        data: [5, 10, 20, 30, 45],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Semaines'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Poids (kg)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique Personnalisé</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/chart.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-auto">
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Graphique avec Taille Personnalisée</h2>
+        <div class="card">
+            <div class="card-body">
+                <!-- Canvas avec largeur et hauteur personnalisées -->
+                <canvas id="customChart" width="250" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-auto">
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Graphique avec Taille Personnalisée</h2>
+        <div class="card">
+            <div class="card-body">
+                <!-- Canvas avec largeur et hauteur personnalisées -->
+                <canvas id="customChar" width="350" height="250"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    // Configuration du graphique
+    const ct = document.getElementById('customChar').getContext('2d');
+    const customChar = new Chart(ct, {
+        type: 'line',
+        data: {
+            labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai','juin'],
+            datasets: [{
+                label: 'Consommation par Kg',
+                data: [12, 19, 3, 5, 2, 2],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2,
+                tension: 0.4
+            },
+            {
+                label: 'Red line',
+                data: [1, 12, 3, 10, 7],
+                borderColor: 'red',
+                backgroundColor: 'red',
+                borderWidth: 2,
+                tension: 0.4
+            },
+            {
+                label: 'Poids',
+                data: [0, 24, 6, 5, 9],
+                borderColor: 'rgba(0, 0, 0, 1)',
+                backgroundColor: 'rgba(0, 0, 0, 1)',
+                borderWidth: 2,
+                tension: 0.4
+            }
+        ]
+        },
+        options: {
+            responsive: false, // Désactive la responsivité pour utiliser les dimensions fixes
+            maintainAspectRatio: false, // Permet de définir une hauteur différente de la largeur
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+    <script>
+        // Configuration du graphique
+        const ctx = document.getElementById('customChart').getContext('2d');
+        const customChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai'],
+                datasets: [{
+                    label: 'Données Exemple',
+                    data: [12, 19, 3, 5, 2],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: false, // Désactive la responsivité pour utiliser les dimensions fixes
+                maintainAspectRatio: false, // Permet de définir une hauteur différente de la largeur
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

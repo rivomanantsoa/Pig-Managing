@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<style>
+    /* Exemple de style personnalisé */
+    .tippy-box[data-theme~='custom'] {
+        background-color: #0c0c0c;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    .spinner-border {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+}
+</style>
+
+<body style="overflow-y:hidden;">
+    
+    <!--- NavBar non responsive -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" id="nav-bar" role="tablist">
+
+    </nav>
+    <!-- Contenue menu voatsindry -->
+    <div class="tab-content">
+    <div id="home" class="tab-pane  active">
+    
+</div> 
+
+<div id="menu2" class="container tab-pane fade">
+    <div style="    z-index: 1030;
+    position: absolute;">
+        voici une autre menu!
+    </div>
+</div>
+</div>
+    <!--- Footer de notre page -->
+    <script src="js/bundle.min.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/notification.js"></script>
+    <script src="js/Menu.js"></script>
+    <script src="js/contenue1.js"></script>
+    <script src="js/insription.js"></script>
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/tippy.js"></script>
+    <script>
+        // Cibler le conteneur et les boutons
+const container = document.getElementById('pigs');
+const scrollLeftButton = document.getElementById('scrollLeft');
+const scrollRightButton = document.getElementById('scrollRight');
+
+// Fonction pour défiler vers la gauche
+scrollLeftButton.addEventListener('click', () => {
+    container.scrollBy({
+        left: -99, // Ajustez la valeur selon la distance souhaitée
+        behavior: 'smooth', // Ajoute une transition fluide
+    });
+});
+
+// Fonction pour défiler vers la droite
+scrollRightButton.addEventListener('click', () => {
+    container.scrollBy({
+        left: 99, // Ajustez la valeur selon la distance souhaitée
+        behavior: 'smooth', // Ajoute une transition fluide
+    });
+});
+
+    </script>
+    <script>
+        // Initialisation avec Tippy.js
+        tippy('#tooltip-button', {
+            content: 'Ajouter un cochon!',
+            placement: 'bottom', // Position
+            delay: [200, 100], // Délai avant d'apparaître/disparaître
+            theme: 'custom', // Utiliser un thème personnalisé
+        });
+    </script>
+
+
+</body>
+
+</html>
+

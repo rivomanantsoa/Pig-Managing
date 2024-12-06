@@ -1,0 +1,208 @@
+body {
+    background-color: rgb(240, 238, 238);
+    color: rgb(0, 0, 0);
+}
+#img {
+    height: 80px;
+    width: 50px;
+    border-radius: 20px;
+}
+#contenu {
+    margin-top: 80px;
+    height: 440px;
+    overflow-y: auto;
+}
+#navbarCollapse{
+    background-color: rgb(218, 233, 18);
+}
+#card {
+    background-color: rgb(255, 255, 255);
+    color: blanchedalmond;
+}
+/****** navbar ******/
+#menu{
+    background-color: #e7e5e2;
+}
+#nav {
+    background-color: bisque;
+   
+}
+.nav-link{
+    font-size: 13pt;
+}
+/****** petit titre ***/
+#amoxie{
+    height: 45px;
+  
+}
+#petitcase{
+    border-radius: 10px;
+    border:solid 1px white;
+    position: relative;
+    margin: 2; 
+    width: 123px;
+    width: fit-content;
+}
+#imgpetit{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 51px;
+    height: 45px;
+    object-fit: cover;
+}
+#text{
+    align-self: center;
+    text-align: center;
+}
+/******* case ***/
+
+#taille {
+    height: 100px;
+    width: 100px;
+}
+#custom-cards {
+    height: 200px;
+    width: 300px;
+}
+/*****/
+#image {
+    border-radius: 100px;
+}
+#cochon {
+    width: 250px;
+    height: 170px;
+    border-top-left-radius: 10px;
+    /* Arrondi en haut à gauche */
+    border-top-right-radius: 10px;
+    /* Arrondi en haut à droite */
+    border-bottom-left-radius: 0;
+    /* Pas d'arrondi en bas à gauche */
+    border-bottom-right-radius: 0;
+    /* Pas d'arrondi en bas à droite */
+}
+#font {
+    width: fit-content;
+    height: fit-content;
+    border-color: antiquewhite;
+    border: solid 2px;
+    border-radius: 20px;
+}
+
+/******/
+.custom-card {
+    width: 250px;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Ajoute des coins arrondis si souhaité */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effet d'ombre pour un style de carte */
+}
+.custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pig-card {
+    position: relative;
+    width: 200px;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.pig-card:hover{
+    width: 205px;
+    height: 195px;
+    border: solid 1px green;
+    position:relative;
+    padding: 0px;
+    margin:0px;
+}
+.pig-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    text-align: center;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Couleur du texte */
+   
+}
+/******** lignr de bas ********/
+#linebas{
+    border-top: solid 2px;
+    border-color: black;
+    margin-top: 11px;
+    padding-top: 6px;
+}
+#pigType{
+    background-color: rgb(248, 244, 244);
+}
+/* Styles Responsives */
+#menu {
+    background-color: #e7e5e2;
+    padding: 10px;
+}
+
+#image {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+#petitcase {
+    border-radius: 10px;
+    border: solid 1px white;
+    width: auto;
+    max-width: 150px;
+}
+
+#imgpetit {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 45px;
+    object-fit: cover;
+}
+
+#text {
+    align-self: center;
+    text-align: center;
+}
+
+/* Pour les écrans de petite taille */
+@media (max-width: 576px) {
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #amoxie {
+        flex-direction: column;
+    }
+
+    #petitcase {
+        max-width: 120px;
+    }
+
+    #image {
+        width: 50px;
+        height: 50px;
+    }
+
+    #imgpetit {
+        height: 35px;
+    }
+
+    #text b {
+        font-size: 12px;
+    }
+}
